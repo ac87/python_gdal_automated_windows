@@ -78,6 +78,7 @@ echo .
 echo All programs installed. Adding paths to environment variables.
 
 :: Add the path to system environment variables.
+:: (these didn't work for me, had to add manually)
 setx /m path "%path%;C:\Program Files\GDAL;
 setx /m path "%path%;C:\Python37;
 setx /m path "%path%;C:\Python37\Scripts;
@@ -85,6 +86,7 @@ setx /m path "%path%;C:\Python37\Scripts;
 :: Create new variables in the system environment for GDAL.
 setx /m GDAL_DATA "C:\Program Files\GDAL\gdal-data"
 setx /m GDAL_DRIVER_PATH "C:\Program Files\GDAL\gdalplugins"
+setx /m PROJ_LIB "C:\Program Files\GDAL\projlib"
 setx /m GDAL_VERSION "3.1.1"
 
 :: Rename the Python file to be able to call from Command Prompt.
